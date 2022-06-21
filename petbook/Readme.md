@@ -4,13 +4,14 @@
 - Step2: deploy simple docker app to k8s cluster (petstore)
 
 # TODO
-- Step3: Multi-Container apps in Kubernetes
+- use create-react-app for client instead of vanilla JS (rename dockerhub image to petbook)
+- Multi-Container apps in Kubernetes
     - create & dockerize an API app that uses a DB storage
-- Step4: integrate AWS deployment with Github Actions
-- Step5: Handling traffic (Ingress Controllers)
-- Step7: Production-grade deployment
-- Step6: HTTPS
-- Step6: Skaffold
+- integrate AWS deployment with Github Actions
+- Handling traffic (Ingress Controllers)
+- Production-grade deployment
+- HTTPS
+- Skaffold
 
 # Petbook
 - create an app where people can post photos of their pets
@@ -21,6 +22,8 @@
 - use JWT authentication (integrate some provider)
 
 -------
+
+# Notes
 
 ### Prepare docker images
 - create a custom website docker image
