@@ -1,4 +1,28 @@
-## Prepare docker images
+## Completed
+
+- Step1: dockerize simple web app (petstore)
+- Step2: deploy simple docker app to k8s cluster (petstore)
+
+# TODO
+- Step3: Multi-Container apps in Kubernetes
+    - create & dockerize an API app that uses a DB storage
+- Step4: integrate AWS deployment with Github Actions
+- Step5: Handling traffic (Ingress Controllers)
+- Step7: Production-grade deployment
+- Step6: HTTPS
+- Step6: Skaffold
+
+# Petbook
+- create an app where people can post photos of their pets
+- users can rate other's pets
+- you are presented with a paginated list of pets sorted by ratings
+## NFR
+- use a Database storage
+- use JWT authentication (integrate some provider)
+
+-------
+
+### Prepare docker images
 - create a custom website docker image
     > see Dockerfile in "website" folder
 - build image
@@ -7,7 +31,7 @@
     > need to login through the docker CLI (echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin)
     > docker push moraruv/petstore-website
 
-## Basic Kubernetes resources
+### Basic Kubernetes resources
 - apiVersion: v1, gets us access to a set of objects
     - check up documentation for the Pod object, and use that apiVersion
 - pod: run one or more very closely related containers
@@ -17,7 +41,7 @@
     > kubectl apply -f <filename>
 - deployments are usually used to control spinning of pods
 
-## Strategies to force a deployment to pick up new image version
+### Strategies to force a deployment to pick up new image version
 - manually delete running pods (silly)
 - update image version number every time the image changes (instad of using default, latest tag)
 - use an imperative command
