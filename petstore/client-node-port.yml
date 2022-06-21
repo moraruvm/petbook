@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: website-node-port
+spec:
+  type: NodePort
+  ports:
+    - port: 8080 # used by other pods to communicate with the pod
+      targetPort: 80 # the port exposed from the pod (same as containerPort in the pod definition)
+      # nodePort: 30000 # public port exposed by the k8s cluster for external access, between 30000 - 32767; if none specified => a random one is assigned
+  selector:
+    component: web
