@@ -1,29 +1,34 @@
-import { AppBar, Badge, CircularProgress, CssBaseline, Grid, ThemeProvider, Toolbar, Typography } from '@mui/material';
+import { AppBar, Container, CssBaseline, ThemeProvider, Toolbar, Typography } from '@mui/material';
 import theme from './theme'
-import { Box, Container } from '@mui/system';
+import { Box } from '@mui/system';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import FeedPage from './feed/feedPage';
+import { MockData } from './mocks/data';
 
 function App() {
+
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline>
+    <BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <CssBaseline>
 
-        <AppBar position='static'>
-          <Toolbar>
-            <Typography variant='h4'><Box fontWeight={'bold'} display={'inline'}>p</Box>etbook</Typography>
-          </Toolbar>
-        </AppBar>
+          <AppBar position='static'>
+            <Toolbar>
+              <Typography variant='h4'><Box fontWeight={'bold'} display={'inline'}>p</Box>etbook</Typography>
+            </Toolbar>
+          </AppBar>
 
-        <Container>
-          <Typography variant='h2' align={'center'}>Hello Material world</Typography>
-          <Grid container justifyContent={'center'}>
-            <Grid item>
-              <CircularProgress />
-            </Grid>
-          </Grid>
-        </Container>
+          <Container>
+            <Routes>
+              <Route path='/' element={<Navigate to='/feed'></Navigate>}>
+              </Route>
+              <Route path="feed" element={<FeedPage pets={MockData.PETS} />}></Route>
+            </Routes>
+          </Container>
 
-      </CssBaseline>
-    </ThemeProvider>
+        </CssBaseline>
+      </ThemeProvider>
+    </BrowserRouter>
   );
 }
 
