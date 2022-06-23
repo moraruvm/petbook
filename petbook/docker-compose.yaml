@@ -1,0 +1,6 @@
+version: '3.9'
+services:
+  petbook-web:
+    build: petbook-web
+    ports:
+      - 3000:80

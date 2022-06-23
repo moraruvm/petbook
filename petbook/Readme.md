@@ -2,9 +2,12 @@
 
 - Step1: dockerize simple web app (petstore)
 - Step2: deploy simple docker app to k8s cluster (petstore)
+- Step3: use create-react-app for client instead of vanilla JS (rename dockerhub image to petbook)
+
+### Bugs
+- nginx not playing nice with react-dom-router, causes refresh to return 404 on routes. Also include nginx config to fix this  in docker image
 
 # TODO
-- use create-react-app for client instead of vanilla JS (rename dockerhub image to petbook)
 - Multi-Container apps in Kubernetes
     - create & dockerize an API app that uses a DB storage
 - integrate AWS deployment with Github Actions
