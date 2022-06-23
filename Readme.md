@@ -1,6 +1,10 @@
 # "Petbook"
 
-Fake social media app for pets. Intended as a personal learning project for various technologies.
+Fake social media app for pets 🐶 😺 🦜
+
+Intended as a personal learning project for various technologies
+
+----------------
 
 ## Completed
 
@@ -8,10 +12,10 @@ Fake social media app for pets. Intended as a personal learning project for vari
 - Step2: deploy simple docker app to k8s cluster (petstore)
 - Step3: use create-react-app for client instead of vanilla JS (rename dockerhub image to petbook)
 
-### Bugs
+### Known bugs
 - nginx not playing nice with react-dom-router, causes refresh to return 404 on routes. Also include nginx config to fix this  in docker image
 
-# TODO
+# TODOs
 - Multi-Container apps in Kubernetes
     - create & dockerize an API app that uses a DB storage
 - integrate AWS deployment with Github Actions
@@ -28,9 +32,9 @@ Fake social media app for pets. Intended as a personal learning project for vari
 - use a Database storage
 - use JWT authentication (integrate some provider)
 
--------
+----------------
 
-# Notes
+# My Notes
 
 ### Prepare docker images
 - create a custom website docker image

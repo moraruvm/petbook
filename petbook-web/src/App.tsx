@@ -1,4 +1,4 @@
-import { AppBar, Container, CssBaseline, ThemeProvider, Toolbar, Typography } from '@mui/material';
+import { AppBar, Container, CssBaseline, Divider, ThemeProvider, Toolbar, Typography } from '@mui/material';
 import theme from './theme'
 import { Box } from '@mui/system';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
@@ -6,6 +6,7 @@ import FeedPage from './feed/feedPage';
 import { MockData } from './mocks/data';
 
 function App() {
+  const appEnv = process.env.REACT_APP_ENV
 
   return (
     <BrowserRouter>
@@ -15,6 +16,8 @@ function App() {
           <AppBar position='static'>
             <Toolbar>
               <Typography variant='h4'><Box fontWeight={'bold'} display={'inline'}>p</Box>etbook</Typography>
+              <Divider/>
+              <Typography>{appEnv}</Typography>
             </Toolbar>
           </AppBar>
 
