@@ -1,3 +1,7 @@
+# "Petbook"
+
+Fake social media app for pets. Intended as a personal learning project for various technologies.
+
 ## Completed
 
 - Step1: dockerize simple web app (petstore)
