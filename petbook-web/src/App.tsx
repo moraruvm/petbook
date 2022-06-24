@@ -3,7 +3,7 @@ import theme from './theme'
 import { Box } from '@mui/system';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import FeedPage from './feed/feedPage';
-import { MockData } from './mocks/data';
+import { MockData } from './service/mocks/data';
 
 function App() {
   const appEnv = process.env.REACT_APP_ENV
@@ -25,7 +25,7 @@ function App() {
             <Routes>
               <Route path='/' element={<Navigate to='/feed'></Navigate>}>
               </Route>
-              <Route path="feed" element={<FeedPage pets={MockData.PETS} />}></Route>
+              <Route path="feed" element={<FeedPage />}></Route>
             </Routes>
           </Container>
 

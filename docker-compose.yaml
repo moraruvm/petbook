@@ -4,3 +4,7 @@ services:
     build: petbook-web
     ports:
       - 3000:80
+  petbook-server:
+    build: petbook-server
+    ports:
+      - 3001:3001
